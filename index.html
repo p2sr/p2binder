@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Portal 2 Keybinder</title>
+	</head>
+	<body>
+		<main>
+			<div class="keypanel">
+				<div class="kp-main">
+					<div class="kp-fnrow">
+						<div class="kp-fngroup">
+							<span class="key">Esc</span> <!-- This is technically bindable but it's a bit weird so let's say it's not -->
+						</div>
+						<div class="kp-fngroup">
+							<span class="key" p2key="f1">F1</span>
+							<span class="key" p2key="f2">F2</span>
+							<span class="key" p2key="f3">F3</span>
+							<span class="key" p2key="f4">F4</span>
+						</div>
+						<div class="kp-fngroup">
+							<span class="key" p2key="f5">F5</span>
+							<span class="key" p2key="f6">F6</span>
+							<span class="key" p2key="f7">F7</span>
+							<span class="key" p2key="f8">F8</span>
+						</div>
+						<div class="kp-fngroup">
+							<span class="key" p2key="f9">F9</span>
+							<span class="key" p2key="f10">F10</span>
+							<span class="key" p2key="f11">F11</span>
+							<span class="key" p2key="f12">F12</span>
+						</div>
+					</div>
+					<div class="kp-mainbody">
+						<div class="kp-row">
+							<span class="key" p2key="`">`</span>
+							<span class="key" p2key="1">1</span>
+							<span class="key" p2key="2">2</span>
+							<span class="key" p2key="3">3</span>
+							<span class="key" p2key="4">4</span>
+							<span class="key" p2key="5">5</span>
+							<span class="key" p2key="6">6</span>
+							<span class="key" p2key="7">7</span>
+							<span class="key" p2key="8">8</span>
+							<span class="key" p2key="9">9</span>
+							<span class="key" p2key="0">0</span>
+							<span class="key" p2key="-">-</span>
+							<span class="key" p2key="=">=</span>
+							<span class="key widekey2" p2key="backspace">Bsp</span>
+						</div>
+						<div class="kp-row">
+							<span class="key widekey1" p2key="tab">Tab</span>
+							<span class="key" p2key="q">Q</span>
+							<span class="key" p2key="w">W</span>
+							<span class="key" p2key="e">E</span>
+							<span class="key" p2key="r">R</span>
+							<span class="key" p2key="t">T</span>
+							<span class="key" p2key="y">Y</span>
+							<span class="key" p2key="u">U</span>
+							<span class="key" p2key="i">I</span>
+							<span class="key" p2key="o">O</span>
+							<span class="key" p2key="p">P</span>
+							<span class="key" p2key="[">[</span>
+							<span class="key" p2key="]">]</span>
+							<span class="key widekey1" p2key="\">\</span>
+						</div>
+						<div class="kp-row">
+							<span class="key widekey2" p2key="capslock">Caps</span>
+							<span class="key" p2key="a">A</span>
+							<span class="key" p2key="s">S</span>
+							<span class="key" p2key="d">D</span>
+							<span class="key" p2key="f">F</span>
+							<span class="key" p2key="g">G</span>
+							<span class="key" p2key="h">H</span>
+							<span class="key" p2key="j">J</span>
+							<span class="key" p2key="k">K</span>
+							<span class="key" p2key="l">L</span>
+							<span class="key" p2key="semicolon">;</span>
+							<span class="key" p2key="'">'</span>
+							<span class="key widekey3" p2key="enter">Ret</span>
+						</div>
+						<div class="kp-row">
+							<span class="key widekey4" p2key="shift">Shift</span>
+							<span class="key" p2key="z">Z</span>
+							<span class="key" p2key="x">X</span>
+							<span class="key" p2key="c">C</span>
+							<span class="key" p2key="v">V</span>
+							<span class="key" p2key="b">B</span>
+							<span class="key" p2key="n">N</span>
+							<span class="key" p2key="m">M</span>
+							<span class="key" p2key=",">,</span>
+							<span class="key" p2key=".">.</span>
+							<span class="key" p2key="/">/</span>
+							<span class="key widekey4" p2key="rshift">Shift</span>
+						</div>
+						<div class="kp-row">
+							<span class="key widekey1" p2key="ctrl">Ctrl</span>
+							<span class="key widekey1" p2key="lwin">Super</span>
+							<span class="key widekey1" p2key="alt">Alt</span>
+							<span class="key widekey5" p2key="space">Space</span>
+							<span class="key widekey1" p2key="ralt">Alt</span>
+							<span class="key widekey1" p2key="rwin">Super</span>
+							<span class="key widekey1" p2key="rctrl">Ctrl</span>
+						</div>
+					</div>
+				</div>
+				<div class="kp-mid">
+					<div class="kp-fnrow">
+						<div class="kp-fngroup">
+							<span class="key">Psc</span> <!-- can't be bound -->
+							<span class="key" p2key="scrolllock">Slk</span>
+							<span class="key" p2key="pause">Brk</span>
+						</div>
+					</div>
+					<div class="kp-midbody">
+						<div class="kp-midpart">
+							<div class="kp-row">
+								<span class="key" p2key="ins">Ins</span>
+								<span class="key" p2key="home">Hme</span>
+								<span class="key" p2key="pgup">Pgu</span>
+							</div>
+							<div class="kp-row">
+								<span class="key" p2key="del">Del</span>
+								<span class="key" p2key="end">End</span>
+								<span class="key" p2key="pgdn">Pgd</span>
+							</div>
+						</div>
+						<div class="kp-midpart">
+							<div class="kp-row">
+								<span class="key" p2key="uparrow">^</span>
+							</div>
+							<div class="kp-row">
+								<span class="key" p2key="leftarrow">&lt;</span>
+								<span class="key" p2key="downarrow">v</span>
+								<span class="key" p2key="rightarrow">&gt;</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="kp-numpad">
+					<div class="kp-numpad-main">
+						<div class="kp-row">
+							<span class="key" p2key="numlock">Num</span>
+							<span class="key" p2key="kp_slash">/</span>
+							<span class="key" p2key="kp_multiply">*</span>
+						</div>
+						<div class="kp-row">
+							<span class="key" p2key="kp_home">7</span>
+							<span class="key" p2key="kp_uparrow">8</span>
+							<span class="key" p2key="kp_pgup">9</span>
+						</div>
+						<div class="kp-row">
+							<span class="key" p2key="kp_leftarrow">4</span>
+							<span class="key" p2key="kp_5">5</span>
+							<span class="key" p2key="kp_rightarrow">6</span>
+						</div>
+						<div class="kp-row">
+							<span class="key" p2key="kp_end">1</span>
+							<span class="key" p2key="kp_downarrow">2</span>
+							<span class="key" p2key="kp_pgdn">3</span>
+						</div>
+						<div class="kp-row">
+							<span class="key widekey3" p2key="kp_ins">0</span>
+							<span class="key" p2key="kp_del">.</span>
+						</div>
+					</div>
+					<div class="kp-col">
+						<span class="key" p2key="kp_minus">-</span>
+						<span class="key tallkey1" p2key="kp_plus">+</span>
+						<span class="key tallkey1" p2key="kp_enter">Ret</span>
+					</div>
+				</div>
+				<div class="kp-mouse">
+					<div class="kp-mouse-main">
+						<span class="key tallkey2" p2key="mouse1">LMB</span>
+						<span class="key tallkey2 thinkey1" p2key="mouse3"></span>
+						<span class="key tallkey2" p2key="mouse2">RMB</span>
+					</div>
+					<div class="kp-mouse-body">
+						<div class="kp-mouse-left">
+							<span class="key" p2key="mouse4">M4</span>
+							<span class="key" p2key="mouse5">M5</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="keybinder">
+				<div class="bindmode">
+					<h3>Bind Mode</h3>
+					<span>
+						<input type="radio" id="bindmode_all" name="bind_mode">
+						<label for="bindmode_all">All</label>
+					</span>
+					<span>
+						<input type="radio" id="bindmode_cm" name="bind_mode">
+						<label for="bindmode_cm">CM</label>
+					</span>
+					<span>
+						<input type="radio" id="bindmode_non_cm" name="bind_mode">
+						<label for="bindmode_non_cm">Non-CM</label>
+					</span>
+				</div>
+				<div class="binds">
+					<div>
+						<h3>Player Control</h3>
+						<span>
+							<input type="radio" id="bind_control_forward" name="key_action" value="+forward">
+							<label for="bind_control_forward">Forward</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_back" name="key_action" value="+back">
+							<label for="bind_control_back">Back</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_left" name="key_action" value="+moveleft">
+							<label for="bind_control_left">Left</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_right" name="key_action" value="+moveright">
+							<label for="bind_control_right">Right</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_jump" name="key_action" value="+jump">
+							<label for="bind_control_jump">Jump</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_crouch" name="key_action" value="+duck">
+							<label for="bind_control_crouch">Crouch</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_blue" name="key_action" value="+attack">
+							<label for="bind_control_blue">Shoot blue</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_orange" name="key_action" value="+attack2">
+							<label for="bind_control_orange">Shoot orange</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_use" name="key_action" value="+use">
+							<label for="bind_control_use">Use</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_control_zoom" name="key_action" value="+zoom">
+							<label for="bind_control_zoom">Zoom</label>
+						</span>
+					</div>
+					<div>
+						<h3>Toggle Binds</h3>
+						<span>
+							<input type="radio" id="bind_toggle_dialogue" name="key_action" value="dialogue_toggle">
+							<label for="bind_toggle_dialogue">Dialogue</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_funneling" name="key_action" value="funneling_toggle">
+							<label for="bind_toggle_funneling">Funneling</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_fullbright" name="key_action" value="fullbright_toggle">
+							<label for="bind_toggle_fullbright">Fullbright</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_lowsens" name="key_action" value="lowsens_toggle">
+							<label for="bind_toggle_lowsens">Low-sens</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_useswap" name="key_action" value="useswap_toggle">
+							<label for="bind_toggle_useswap">Use-swap</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_supershoot" name="key_action" value="supershoot_toggle">
+							<label for="bind_toggle_supershoot">Supershoot</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_30fps" name="key_action" value="30fps_toggle">
+							<label for="bind_toggle_30fps">30FPS</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_toggle_contimes" name="key_action" value="contimes_toggle">
+							<label for="bind_toggle_contimes">Contimes</label>
+						</span>
+					</div>
+					<div>
+						<h3>Hold Binds</h3>
+						<span>
+							<input type="radio" id="bind_hold_dialogue" name="key_action" value="+dialogue">
+							<label for="bind_hold_dialogue">Dialogue</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_funneling" name="key_action" value="+funneling">
+							<label for="bind_hold_funneling">Funneling</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_fullbright" name="key_action" value="+fullbright">
+							<label for="bind_hold_fullbright">Fullbright</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_lowsens" name="key_action" value="+lowsens">
+							<label for="bind_hold_lowsens">Low-sens</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_useswap" name="key_action" value="+useswap">
+							<label for="bind_hold_useswap">Use-swap</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_supershoot" name="key_action" value="+supershoot">
+							<label for="bind_hold_supershoot">Supershoot</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_30fps" name="key_action" value="+30fps">
+							<label for="bind_hold_30fps">30FPS</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_hold_contimes" name="key_action" value="+contimes">
+							<label for="bind_hold_contimes">Contimes</label>
+						</span>
+					</div>
+					<div>
+						<h3>Misc</h3>
+						<span>
+							<input type="radio" id="bind_misc_taunt" name="key_action" value="taunt">
+							<label for="bind_misc_taunt">Taunt</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_fasttaunt" name="key_action" value="taunt fast">
+							<label for="bind_misc_fasttaunt">Fast taunt</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_stopvideos" name="key_action" value="stopvideos">
+							<label for="bind_misc_stopvideos">Stop videos</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_reset" name="key_action" value="do_reset">
+							<label for="bind_misc_reset">Reset run</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_restartlvl" name="key_action" value="restart_level">
+							<label for="bind_misc_restartlvl">Restart level</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_save" name="key_action" value="save">
+							<label for="bind_misc_save">Save:</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_load" name="key_action" value="load">
+							<label for="bind_misc_load">Load:</label>
+						</span>
+						<span>
+							<input type="radio" id="bind_misc_saveload" name="key_action" value="saveload">
+							<label for="bind_misc_saveload">Save-load:</label>
+						</span>
+						<span>
+							<input type="text" id="bind_saveload_name">
+						</span>
+						<button id="reset_bind">Clear</button>
+					</div>
+				</div>
+			</div>
+			<button id="gen_cfg">Generate</button>
+		</main>
+	</body>
+	<script src="keypanel.js"></script>
+</html>

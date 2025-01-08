@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+main {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.keypanel {
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	margin: auto;
+	gap: 30px;
+}
+
+.keypanel .kp-funcrow {
+	display: flex;
+	flex-direction: row;
+}
+
+.keypanel .kp-main, .keypanel .kp-mid {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.keypanel .kp-fnrow {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 3px;
+}
+
+.keypanel .kp-fnrow .kp-fngroup {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
+.keypanel .kp-main .kp-mainbody {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 3px;
+}
+
+.keypanel .kp-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 3px;
+}
+
+.keypanel .kp-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3px;
+}
+
+.keypanel .kp-mid .kp-midbody {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+}
+
+.keypanel .kp-mid .kp-midbody .kp-midpart {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.keypanel .kp-numpad {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	gap: 3px;
+}
+
+.keypanel .kp-numpad .kp-numpad-main {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 3px;
+}
+
+.keypanel .kp-mouse {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	margin-left: 20px;
+}
+
+.keypanel .kp-mouse .kp-mouse-main {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+}
+
+.keypanel .kp-mouse .kp-mouse-body {
+	display: flex;
+	flex-direction: row;
+	gap: 3px;
+	background: #999;
+	align-items: center;
+	padding: 5px;
+	height: 150px;
+}
+
+.keypanel .kp-mouse .kp-mouse-body .kp-mouse-left {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.keypanel .key {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 50px;
+	min-height: 50px;
+	background: #999;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3em;
+	cursor: default;
+}
+
+.keypanel .key.bindable {
+	background: #eee;
+}
+
+.keypanel .key.bindable:hover {
+	cursor: pointer;
+	background: #ddd;
+}
+
+.keypanel .key.bound {
+	background: #fdd;
+}
+
+.keypanel .key.bound:hover {
+	background: #ecc;
+}
+
+.keypanel .key.selected {
+	background: #ccc;
+}
+
+.keypanel .key.selected:hover {
+	background: #ccc;
+}
+
+.keypanel .key.bound.selected {
+	background: #dbb;
+}
+
+.keypanel .key.bound.selected:hover {
+	background: #dbb;
+}
+
+.keypanel .thinkey1 { min-width: 20px; }
+
+.keypanel .widekey1 { min-width: 70px; }
+.keypanel .widekey2 { min-width: 90px; }
+.keypanel .widekey3 { min-width: 103px; }
+.keypanel .widekey4 { min-width: 123px; }
+.keypanel .widekey5 { min-width: 341px; }
+
+.keypanel .tallkey1 { min-height: 103px; }
+.keypanel .tallkey2 { min-height: 70px; }
+
+.keybinder.hidden {
+	display: none !important;
+}
+
+.keybinder h3 {
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.keybinder {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 30px;
+}
+
+.keybinder .binds {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 30px;
+	background: #ddd;
+	padding: 20px;
+}
+
+.keybinder .binds > div {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.keybinder .bindmode {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	padding: 20px;
+	background: #ddd;
+}
+
+button {
+	font-size: 1.5em;
+	background: #eee;
+	border: 2px solid black;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #ccc;
+}
+
+#reset_bind {
+	flex-grow: 1;
+	margin: 10px;
+}
+
+#gen_cfg {
+	padding: 30px;
+}
