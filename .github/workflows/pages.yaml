@@ -27,7 +27,7 @@ jobs:
               with:
                 path: |
                     .
-                    !./.github
+                    !.github
 
             - name: Deploy to GitHub Pages
               id: deployment
