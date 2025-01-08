@@ -193,7 +193,13 @@ main {
 	gap: 30px;
 }
 
-.keybinder .binds {
+.binds {
+    background: #ddd;
+    padding: 20px;
+    max-width: 650px;
+}
+
+.keybinder .binds > div {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -202,7 +208,7 @@ main {
 	padding: 20px;
 }
 
-.keybinder .binds > div {
+.keybinder .binds > div > div{
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
