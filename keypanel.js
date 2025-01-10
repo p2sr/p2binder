@@ -37,6 +37,10 @@ function setModeBinding(key, val) {
 	if (g_bind_mode === BindMode.ALL || g_bind_mode === BindMode.NON_CM) {
 		g_set_binds[key][1] = val;
 	}
+
+	if (g_set_binds[key][0] === null && g_set_binds[key][1] === null) {
+		delete g_set_binds[key];
+	}
 }
 
 let keys = document.getElementsByClassName("key");
@@ -215,6 +219,7 @@ document.getElementById("gen_cfg").addEventListener("click", function() {
 		const cm = ent[1][0];
 		const non_cm = ent[1][1];
 
+		if (cm === non_cm && cm === null) continue; // backup to prevent null binds
 		let cmd =
 			cm === non_cm ?
 			cm :
