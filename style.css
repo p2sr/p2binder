@@ -1,7 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+	--main-bg: white;
+	--main-col: black;
+	--key-bg: #999;
+	--key-bg-hover: #ccc;
+	--key-bg-selected: #ddd;
+	--key-bg-bound: #fdd;
+	--key-bg-bound-hover: #ecc;
+	--key-bg-bound-selected: #dbb;
+	--key-bg-bound-selected-hover: #dbb;
+	--key-bg-bindable: #eee;
+	--key-bg-bindable-hover: #ddd;
+
+	--panel-bg: #ddd;
+	--button-bg: #eee;
+	--button-bg-hover: #ccc;
+	--button-border: 2px solid black;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-bg: #111;
+		--main-col: white;
+		--key-bg: #333;
+		--key-bg-hover: #666;
+		--key-bg-selected: #888;
+		--key-bg-bound: #f66;
+		--key-bg-bound-hover: #e55;
+		--key-bg-bound-selected: #d44;
+		--key-bg-bound-selected-hover: #d44;
+		--key-bg-bindable: #555;
+		--key-bg-bindable-hover: #444;
+
+		--panel-bg: #555;
+		--button-bg: #444;
+		--button-bg-hover: #333;
+		--button-border: 2px solid white;
+	}
+}
+
+html {
+	background: var(--main-bg);
+	color: var(--main-col);
+}
+
 main {
-	margin-top: 100px;
+	margin-top: 50px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -15,11 +60,7 @@ main {
 	align-items: stretch;
 	margin: auto;
 	gap: 30px;
-}
-
-.keypanel .kp-funcrow {
-	display: flex;
-	flex-direction: row;
+	user-select: none;
 }
 
 .keypanel .kp-main, .keypanel .kp-mid {
@@ -108,7 +149,7 @@ main {
 	display: flex;
 	flex-direction: row;
 	gap: 3px;
-	background: #999;
+	background: var(--key-bg);
 	align-items: center;
 	padding: 5px;
 	height: 150px;
@@ -127,43 +168,43 @@ main {
 	justify-content: center;
 	min-width: 50px;
 	min-height: 50px;
-	background: #999;
+	background: var(--key-bg);
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.3em;
 	cursor: default;
 }
 
 .keypanel .key.bindable {
-	background: #eee;
+	background: var(--key-bg-bindable);
 }
 
 .keypanel .key.bindable:hover {
 	cursor: pointer;
-	background: #ddd;
+	background: var(--key-bg-bindable-hover);
 }
 
 .keypanel .key.bound {
-	background: #fdd;
+	background: var(--key-bg-bound);
 }
 
 .keypanel .key.bound:hover {
-	background: #ecc;
+	background: var(--key-bg-bound-hover);
 }
 
 .keypanel .key.selected {
-	background: #ccc;
+	background: var(--key-bg-selected);
 }
 
 .keypanel .key.selected:hover {
-	background: #ccc;
+	background: var(--key-bg-selected);
 }
 
 .keypanel .key.bound.selected {
-	background: #dbb;
+	background: var(--key-bg-bound-selected);
 }
 
 .keypanel .key.bound.selected:hover {
-	background: #dbb;
+	background: var(--key-bg-bound-selected-hover);
 }
 
 .keypanel .thinkey1 { min-width: 20px; }
@@ -194,7 +235,7 @@ main {
 }
 
 .binds {
-    background: #ddd;
+    background: var(--panel-bg);
     padding: 20px;
     max-width: 650px;
 }
@@ -204,11 +245,11 @@ main {
 	flex-direction: row;
 	justify-content: center;
 	gap: 30px;
-	background: #ddd;
+	background: var(--panel-bg);
 	padding: 20px;
 }
 
-.keybinder .binds > div > div{
+.keybinder .binds > div > div {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
@@ -219,18 +260,19 @@ main {
 	flex-direction: column;
 	gap: 5px;
 	padding: 20px;
-	background: #ddd;
+	background: var(--panel-bg);
 }
 
 button {
 	font-size: 1.5em;
-	background: #eee;
-	border: 2px solid black;
+	background: var(--button-bg);
+	color: var(--main-col);
+	border: var(--button-border);
 	cursor: pointer;
 }
 
 button:hover {
-	background: #ccc;
+	background: var(--button-bg-hover);
 }
 
 #reset_bind {
@@ -247,10 +289,13 @@ button:hover {
 }
 
 #links a {
-    color: inherit;
     padding: 0.2em 0.2em;
     margin: auto;
 	text-decoration: none;
 	vertical-align: middle;
     font-size: 4em;
+}
+
+a {
+	color: inherit;
 }
