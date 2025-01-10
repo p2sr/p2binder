@@ -2,8 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf8" />
-		<link rel="stylesheet" href="style.css" />
 		<title>Portal 2 Keybinder</title>
+		<link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" type="text/css">
+        <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/83299896" />
 	</head>
 	<body>
 		<main>
@@ -335,11 +337,11 @@
                                 <input type="radio" id="bind_misc_restartlvl" name="key_action" value="restart_level">
                                 <label for="bind_misc_restartlvl">Restart level</label>
                             </span>
-                            <span title="Creates a save using the name below ('quick' reccomended)">
+                            <span title="Creates a save using the name below ('quick' recommended)">
                                 <input type="radio" id="bind_misc_save" name="key_action" value="save">
                                 <label for="bind_misc_save">Save:</label>
                             </span>
-                            <span title="Loads a save using the name below ('quick' reccomended)">
+                            <span title="Loads a save using the name below ('quick' recommended)">
                                 <input type="radio" id="bind_misc_load" name="key_action" value="load">
                                 <label for="bind_misc_load">Load:</label>
                             </span>
@@ -355,7 +357,11 @@
                     </div>
 				</div>
 			</div>
-			<button id="gen_cfg">Generate</button>
+			<div id="links">
+				<button id="gen_cfg">Generate</button>
+				<a href="https://github.com/p2sr/p2binder" target="_blank" class="fa-brands fa-github"></a>
+				<a href="https://discord.com/invite/hRwE4Zr" target="_blank" class="fa-brands fa-discord"></a>
+			</div>
 		</main>
 	</body>
 	<script src="keypanel.js"></script>

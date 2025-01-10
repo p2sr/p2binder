@@ -241,3 +241,16 @@ button:hover {
 #gen_cfg {
 	padding: 30px;
 }
+
+#links {
+	height: 93px;
+}
+
+#links a {
+    color: inherit;
+    padding: 0.2em 0.2em;
+    margin: auto;
+	text-decoration: none;
+	vertical-align: middle;
+    font-size: 4em;
+}
