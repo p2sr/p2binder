@@ -10,6 +10,7 @@ let g_set_binds = {
 	"mouse1": [ "+attack",       "+attack"       ],
 	"mouse2": [ "+attack2",      "+attack2"      ],
 };
+const g_default_binds = JSON.parse(JSON.stringify(g_set_binds));
 const BindMode = {
 	ALL: 0,
 	CM: 1,
@@ -206,6 +207,13 @@ document.getElementById("reset_bind").addEventListener("click", function() {
 		g_current_selected.attributes.getNamedItem("p2key").value;
 
 	setModeBinding(key_name, null);
+
+	updateBound();
+	updateSelected();
+});
+
+document.getElementById("reset_all").addEventListener("click", function() {
+	g_set_binds = JSON.parse(JSON.stringify(g_default_binds));
 
 	updateBound();
 	updateSelected();

@@ -280,6 +280,15 @@ button:hover {
 	margin: 10px;
 }
 
+#reset_all {
+	padding: 30px;
+	border: 2px solid var(--key-bg-bound);
+}
+
+#reset_all:hover {
+	background: var(--key-bg-bound-hover);
+}
+
 #gen_cfg {
 	padding: 30px;
 }
