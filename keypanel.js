@@ -42,6 +42,8 @@ function setModeBinding(key, val) {
 	if (g_set_binds[key][0] === null && g_set_binds[key][1] === null) {
 		delete g_set_binds[key];
 	}
+
+	window.localStorage.setItem("keybinds", JSON.stringify(g_set_binds))
 }
 
 let keys = document.getElementsByClassName("key");
@@ -214,6 +216,7 @@ document.getElementById("reset_bind").addEventListener("click", function() {
 
 document.getElementById("reset_all").addEventListener("click", function() {
 	g_set_binds = JSON.parse(JSON.stringify(g_default_binds));
+	window.localStorage.clear();
 
 	updateBound();
 	updateSelected();
@@ -258,4 +261,14 @@ document.getElementById("gen_cfg").addEventListener("click", function() {
 		window.URL.revokeObjectURL(data);
 		a.remove();
 	}, 0);
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+	let stored_binds = window.localStorage.getItem("keybinds");
+	if (stored_binds !== null) {
+		g_set_binds = JSON.parse(stored_binds);
+	}
+	
+	updateBound();
+	updateSelected();
 });
