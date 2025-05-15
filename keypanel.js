@@ -235,7 +235,7 @@ document.getElementById("gen_cfg").addEventListener("click", function() {
 	}
 
 	file_str += "host_writeconfig\n";
-	file_str += "echo \"Binds configured! Have fun!\"";
+	file_str += "echo \"Binds configured! Have fun!\"\n";
 
 	const blob = new Blob([file_str]);
 	const data = window.URL.createObjectURL(blob);
