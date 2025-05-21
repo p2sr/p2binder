@@ -36,7 +36,7 @@
 					</div>
 					<div class="kp-mainbody">
 						<div class="kp-row">
-							<span class="key" p2key="`">`</span>
+							<span class="key" p2key="`">~<br/>`</span>
 							<span class="key" p2key="1">1</span>
 							<span class="key" p2key="2">2</span>
 							<span class="key" p2key="3">3</span>
@@ -49,7 +49,7 @@
 							<span class="key" p2key="0">0</span>
 							<span class="key" p2key="-">-</span>
 							<span class="key" p2key="=">=</span>
-							<span class="key widekey2" p2key="backspace">Bsp</span>
+							<span class="key widekey2" p2key="backspace">Back</span>
 						</div>
 						<div class="kp-row">
 							<span class="key widekey1" p2key="tab">Tab</span>
@@ -80,7 +80,7 @@
 							<span class="key" p2key="l">L</span>
 							<span class="key" p2key="semicolon">;</span>
 							<span class="key" p2key="'">'</span>
-							<span class="key widekey3" p2key="enter">Ret</span>
+							<span class="key widekey3" p2key="enter">Enter<br/><small>Return</small></span>
 						</div>
 						<div class="kp-row">
 							<span class="key widekey4" p2key="shift">Shift</span>
@@ -98,11 +98,11 @@
 						</div>
 						<div class="kp-row">
 							<span class="key widekey1" p2key="ctrl">Ctrl</span>
-							<span class="key widekey1" p2key="lwin">Super</span>
+							<span class="key widekey1" p2key="lwin">Win<br/><small>Super</small></span>
 							<span class="key widekey1" p2key="alt">Alt</span>
 							<span class="key widekey5" p2key="space">Space</span>
 							<span class="key widekey1" p2key="ralt">Alt</span>
-							<span class="key widekey1" p2key="rwin">Super</span>
+							<span class="key widekey1" p2key="rwin">Win<br/><small>Super</small></span>
 							<span class="key widekey1" p2key="rctrl">Ctrl</span>
 						</div>
 					</div>
@@ -120,22 +120,22 @@
 							<div class="kp-row">
 								<span class="key" p2key="ins">Ins</span>
 								<span class="key" p2key="home">Hme</span>
-								<span class="key" p2key="pgup">Pgu</span>
+								<span class="key" p2key="pgup">Pg🠉</span>
 							</div>
 							<div class="kp-row">
 								<span class="key" p2key="del">Del</span>
 								<span class="key" p2key="end">End</span>
-								<span class="key" p2key="pgdn">Pgd</span>
+								<span class="key" p2key="pgdn">Pg🠋</span>
 							</div>
 						</div>
 						<div class="kp-midpart">
 							<div class="kp-row">
-								<span class="key" p2key="uparrow">^</span>
+								<span class="key" p2key="uparrow">🠉</span>
 							</div>
 							<div class="kp-row">
-								<span class="key" p2key="leftarrow">&lt;</span>
-								<span class="key" p2key="downarrow">v</span>
-								<span class="key" p2key="rightarrow">&gt;</span>
+								<span class="key" p2key="leftarrow">🠈</span>
+								<span class="key" p2key="downarrow">🠋</span>
+								<span class="key" p2key="rightarrow">🠊</span>
 							</div>
 						</div>
 					</div>
@@ -170,7 +170,7 @@
 					<div class="kp-col">
 						<span class="key" p2key="kp_minus">-</span>
 						<span class="key tallkey1" p2key="kp_plus">+</span>
-						<span class="key tallkey1" p2key="kp_enter">Ret</span>
+						<span class="key tallkey1" p2key="kp_enter">Ent<br/><small>Return</small></span>
 					</div>
 				</div>
 				<div class="kp-mouse">
@@ -352,9 +352,11 @@
                             <span>
                                 <input type="text" id="bind_saveload_name">
                             </span>
-                            <button id="reset_bind">Clear</button>
                         </div>
                     </div>
+					<div>
+						<button id="reset_bind">Clear Key</button>
+					</div>
 				</div>
 			</div>
 			<div id="links">

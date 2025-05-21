@@ -51,6 +51,9 @@ for (let i = 0; i < keys.length; ++i) {
 	let key_attr = keys[i].attributes.getNamedItem("p2key");
 	if (key_attr !== null) {
 		keys[i].classList.add("bindable");
+		// Add the key name to the title (hover text)
+		let title = keys[i].attributes.getNamedItem("title")?.value || "";
+		keys[i].setAttribute("title", `${title}\n${key_attr.value.toUpperCase()}`.trim());
 		keys[i].addEventListener("click", function() {
 			if (g_current_selected !== null) {
 				g_current_selected.classList.remove("selected");
