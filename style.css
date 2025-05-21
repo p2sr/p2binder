@@ -6,10 +6,10 @@
 	--key-bg: #999;
 	--key-bg-hover: #ccc;
 	--key-bg-selected: #ddd;
-	--key-bg-bound: #fdd;
-	--key-bg-bound-hover: #ecc;
-	--key-bg-bound-selected: #dbb;
-	--key-bg-bound-selected-hover: #dbb;
+	--key-bg-bound: #f99;
+	--key-bg-bound-hover: #e88;
+	--key-bg-bound-selected: #d77;
+	--key-bg-bound-selected-hover: #d77;
 	--key-bg-bindable: #eee;
 	--key-bg-bindable-hover: #ddd;
 
