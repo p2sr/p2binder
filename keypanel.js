@@ -1,5 +1,5 @@
-let g_current_selected = null;
-let g_set_binds = {
+var g_current_selected = null;
+var g_set_binds = {
 	"w":      [ "+forward",      "+forward"      ],
 	"a":      [ "+moveleft",     "+moveleft"     ],
 	"s":      [ "+back",         "+back"         ],
@@ -16,7 +16,7 @@ const BindMode = {
 	CM: 1,
 	NON_CM: 2,
 };
-let g_bind_mode = BindMode.ALL; // Fuck you JS for not having proper enums
+var g_bind_mode = BindMode.ALL; // Fuck you JS for not having proper enums
 
 function getBinding(key) {
 	if (key === null) return [ null, null ];
@@ -46,14 +46,15 @@ function setModeBinding(key, val) {
 	window.localStorage.setItem("keybinds", JSON.stringify(g_set_binds))
 }
 
-let keys = document.getElementsByClassName("key");
+const keys = document.getElementsByClassName("key");
 for (let i = 0; i < keys.length; ++i) {
-	let key_attr = keys[i].attributes.getNamedItem("p2key");
+	const key_attr = keys[i].attributes.getNamedItem("data-bind");
 	if (key_attr !== null) {
 		keys[i].classList.add("bindable");
 		// Add the key name to the title (hover text)
-		let title = keys[i].attributes.getNamedItem("title")?.value || "";
-		keys[i].setAttribute("title", `${title}\n${key_attr.value.toUpperCase()}`.trim());
+		const title = keys[i].attributes.getNamedItem("title")?.value || "";
+		const code = keys[i].attributes.getNamedItem("data-code")?.value || "";
+		keys[i].setAttribute("title", `${title}\n${key_attr.value.toUpperCase()} (${code})`.trim());
 		keys[i].addEventListener("click", function() {
 			if (g_current_selected !== null) {
 				g_current_selected.classList.remove("selected");
@@ -113,10 +114,10 @@ function updateSelected() {
 	document.getElementById("bindmode_cm").checked = g_bind_mode === BindMode.CM;
 	document.getElementById("bindmode_non_cm").checked = g_bind_mode === BindMode.NON_CM;
 
-	let key_name =
+	const key_name =
 		g_current_selected === null ?
 		null :
-		g_current_selected.attributes.getNamedItem("p2key").value;
+		g_current_selected.attributes.getNamedItem("data-bind").value;
 
 	let active_bind_full = null;
 	switch (g_bind_mode) {
@@ -159,7 +160,7 @@ function updateSelected() {
 function updateBind() {
 	let active_bind = null;
 
-	let actions = document.getElementsByName("key_action");
+	const actions = document.getElementsByName("key_action");
 	for (let i = 0; i < actions.length; ++i) {
 		if (actions[i].checked) {
 			active_bind = actions[i].value;
@@ -187,7 +188,7 @@ function updateBind() {
 	let key_name =
 		g_current_selected === null ?
 		null :
-		g_current_selected.attributes.getNamedItem("p2key").value;
+		g_current_selected.attributes.getNamedItem("data-bind").value;
 
 	setModeBinding(key_name, active_bind_full);
 
@@ -197,19 +198,19 @@ function updateBind() {
 function updateBound() {
 	for (let i = 0; i < keys.length; ++i) {
 		keys[i].classList.remove("bound");
-		let key_attr = keys[i].attributes.getNamedItem("p2key");
+		const key_attr = keys[i].attributes.getNamedItem("data-bind");
 		if (key_attr !== null) {
-			let binding = getBinding(key_attr.value);
+			const binding = getBinding(key_attr.value);
 			if (binding[0] !== null || binding[1] !== null) keys[i].classList.add("bound");
 		}
 	}
 }
 
 document.getElementById("reset_bind").addEventListener("click", function() {
-	let key_name =
+	const key_name =
 		g_current_selected === null ?
 		null :
-		g_current_selected.attributes.getNamedItem("p2key").value;
+		g_current_selected.attributes.getNamedItem("data-bind").value;
 
 	setModeBinding(key_name, null);
 
