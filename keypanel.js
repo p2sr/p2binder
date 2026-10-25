@@ -233,17 +233,34 @@ document.getElementById("gen_cfg").addEventListener("click", function() {
 		const cm = ent[1][0];
 		const non_cm = ent[1][1];
 
-		if (cm === non_cm && cm === null) continue; // backup to prevent null binds
-		let cmd =
-			cm === non_cm ?
-			cm :
-			cm !== null && non_cm !== null ?
-			`cm_only ${cm}; non_cm_only ${non_cm}` :
-			cm !== null ?
-			`cm_only ${cm}` :
-			non_cm !== null ?
-			`non_cm_only ${non_cm}` :
-			null;
+		let cmd = null;
+		if (cm === non_cm) {
+			if (cm === null) continue; // backup to prevent null binds
+			cmd = cm;
+		} else {
+
+			// Button keys must be at the start of the bind
+			// (i.e. `bind key "+command"` not `bind key "command; +command"`)
+			// Handle that first
+			if (cm !== null && non_cm !== null && cm.startsWith("+") && non_cm.startsWith("+")) {
+				console.warn(`Both CM and Non-CM binds for key "${key}" are + commands. This is not supported and will result in only the Non-CM bind being used.`);
+				cmd = `+non_cm_only ${non_cm.slice(1)}`;
+			} else if (cm !== null && cm.startsWith("+")) {
+				cmd = `+cm_only ${cm.slice(1)}`;
+			} else if (non_cm !== null && non_cm.startsWith("+")) {
+				cmd = `+non_cm_only ${non_cm.slice(1)}`;
+			}
+
+			// Then handle non-button commands
+			if (cm !== null && !cm.startsWith("+")) {
+				if (cmd !== null) cmd += "; ";
+				cmd += `cm_only ${cm}`;
+			}
+			if (non_cm !== null && !non_cm.startsWith("+")) {
+				if (cmd !== null) cmd += "; ";
+				cmd += `non_cm_only ${non_cm}`;
+			}
+		}
 
 		file_str += `bind "${key}" "${cmd}"\n`;
 	}
