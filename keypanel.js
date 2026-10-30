@@ -9,6 +9,7 @@ var g_set_binds = {
 	"`":      [ "toggleconsole", "toggleconsole" ],
 	"mouse1": [ "+attack",       "+attack"       ],
 	"mouse2": [ "+attack2",      "+attack2"      ],
+	"enter":  [ "chat", 		 "chat"          ],
 };
 const g_default_binds = JSON.parse(JSON.stringify(g_set_binds));
 const BindMode = {
