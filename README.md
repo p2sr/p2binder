@@ -1,5 +1,7 @@
 # p2binder
 
+[![License](https://img.shields.io/github/license/p2sr/p2binder)](https://github.com/p2sr/p2binder/blob/master/UNLICENSE)
+
 p2binder is a simple web app for setting up keybinds for speedrunning Portal 2,
 and mods based on it. It is intended for new players who want to get into
 speedrunning with minimal setup.
